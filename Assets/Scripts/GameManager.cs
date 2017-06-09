@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour {
     public int maxScore = 10;
     public GameObject ball;
 
-    private int redPlayerScore = 0;
-    private int bluePlayerScore = 0;
+    private int playerOneScore = 0;
+    private int playerTwoScore = 0;
 
     private void Start() {
         winText.gameObject.SetActive(false);
@@ -26,20 +26,20 @@ public class GameManager : MonoBehaviour {
 
     public void UpdateScore(int player) {
         if (player == 1) {
-            redPlayerScore++;
+            playerOneScore++;
         } else {
-            bluePlayerScore++;
+            playerTwoScore++;
         }
 
-        scoreText.text = redPlayerScore + " - " + bluePlayerScore;
+        scoreText.text = playerOneScore + " - " + playerTwoScore;
         CheckWinCondition(player);
     }
 
     private void CheckWinCondition(int player) {
-        if (redPlayerScore >= maxScore || bluePlayerScore >= maxScore) {
+        if (playerOneScore >= maxScore || playerTwoScore >= maxScore) {
             ball.SetActive(false);
             winText.gameObject.SetActive(true);
-            winText.text = (player == 1 ? "Red" : "Blue") + " Player Wins!";
+            winText.text = "Player " + (player == 1 ? "One" : "Two") + " Wins!";
             winText.color = (player == 1 ? Color.red : Color.blue);
         }
     }
