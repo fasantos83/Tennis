@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void UpdateScore(int player) {

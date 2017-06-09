@@ -28,7 +28,7 @@ public class PaddleController : MonoBehaviour {
             newPosition = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, clampYPosition, transform.position.z), speed * Time.deltaTime);
         } else {
             direction = 0;
-            if (isPlayerOne && Input.GetKey(KeyCode.R) || !isPlayerOne && Input.GetKey(KeyCode.UpArrow)) {
+            if (isPlayerOne && Input.GetKey(KeyCode.W) || !isPlayerOne && Input.GetKey(KeyCode.UpArrow)) {
                 direction = 1;
             } else if (isPlayerOne && Input.GetKey(KeyCode.S) || !isPlayerOne && Input.GetKey(KeyCode.DownArrow)) {
                 direction = -1;
