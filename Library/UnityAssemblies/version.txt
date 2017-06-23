@@ -1,5 +1,5 @@
 5.6.1f1:3.1.0.0
-StandaloneWindows
+WebGL
 E:/Programs/Unity/Editor/Data/Managed/UnityEngine.dll
 E:/Programs/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
 E:/Programs/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
